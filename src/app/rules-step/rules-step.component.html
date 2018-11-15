@@ -1,0 +1,122 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step label="RULE DETAILS">
+    <div *ngIf="stepper.selectedIndex  == 0">
+      <mat-card>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2 class="fs-title">Rule Basic Details</h2>
+            <h3 class="fs-subtitle">step 1 of 8</h3>
+        </div>
+          <app-details></app-details>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+              <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+            </div>
+      </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="SELECT RULE TYPE">
+    <div *ngIf="stepper.selectedIndex  == 1">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">SELECT RULE TYPE</h2>
+                <h3 class="fs-subtitle">step 2 of 8</h3>
+            </div>
+            <app-ruletype></app-ruletype>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="SELECT FILTERS">
+    <div *ngIf="stepper.selectedIndex  == 2">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">ADD FILTERS</h2>
+                <h3 class="fs-subtitle">step 3 of 8</h3>
+            </div>
+            <app-rulefilters></app-rulefilters>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="SET CONDITION">
+    <div *ngIf="stepper.selectedIndex  == 3">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">SET CONDITION</h2>
+                <h3 class="fs-subtitle">step 4 of 8</h3>
+            </div>
+            <app-rulecondition></app-rulecondition>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="SELECT ATTRIBUTE">
+    <div *ngIf="stepper.selectedIndex  == 4">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">SELECT ATTRIBUTES</h2>
+                <h3 class="fs-subtitle">step 5 of 8</h3>
+            </div>
+            <app-ruleattribute></app-ruleattribute>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="TEST RULE">
+    <div *ngIf="stepper.selectedIndex  == 5">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">TEST RULE</h2>
+                <h3 class="fs-subtitle">step 6 of 8</h3>
+            </div>
+            <app-ruletest></app-ruletest>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="ATTACH SCHEME(S)">
+    <div *ngIf="stepper.selectedIndex  == 6">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">ATTACH SCHEME (S)</h2>
+                <h3 class="fs-subtitle">step 7 of 8</h3>
+            </div>
+            <app-ruleattachment></app-ruleattachment>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+  <mat-step label="APPROVAL">
+    <div *ngIf="stepper.selectedIndex  == 7">
+        <mat-card>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="fs-title">APPROVE RULE</h2>
+                <h3 class="fs-subtitle">step 8 of 8</h3>
+            </div>
+            <app-ruleapproval></app-ruleapproval>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                  <button class="action-btn prev" (click)="changeStep(-1);">Previous</button>
+                  <button class="action-btn nxt" (click)="changeStep(1);">Next</button>
+                </div>
+        </mat-card>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

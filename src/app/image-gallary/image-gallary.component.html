@@ -1,0 +1,25 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+        <mat-card class="image-thumbnail">
+          <mat-card-content [ngStyle]="{'backgroundImage':'url(' + filePath + imageSelected + ')'}"></mat-card-content>
+        </mat-card>
+  </div>
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-1 col-xs-2 col-sm-1">
+        <mat-card class="image-thumbnail direction-arrow">
+          <span><</span>
+        </mat-card>
+    </div>
+    <div class="col-md-2 col-xs-3 col-sm-2 padding0 thumb" *ngFor="let image of images;">
+        <mat-card class="image-thumbnail" (mouseover)="setImage(image)">
+            <mat-card-content [ngStyle]="{'backgroundImage':'url(' + filePath + image.url + ')'}"></mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-1 col-xs-2 col-sm-1 " >
+        <mat-card class="image-thumbnail direction-arrow">
+            <span>></span>
+          </mat-card>
+    </div>
+  </div>
+  
+</div>

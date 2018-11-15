@@ -1,0 +1,60 @@
+.service-title {
+    font-size: 14px;
+    font-family: Roboto-bold;
+    color:#000;
+}
+.service-cards{
+    margin-left:5px;
+}
+.checked{
+    color:orange;
+}
+.select-button {
+    width: 100%;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 14px;
+    color:#fff;
+    background-color: #337ab7;
+}
+.image-container {
+    min-height: 68%;
+}
+.text-container {
+    padding: 15px 15px 0px;
+    min-height: 22%;
+}
+.action-container {
+    padding-left:15px;
+    padding-right:15px;
+    margin-top: 5px;
+    min-height:10%;
+}
+.rating-container{
+    padding-left:15px;
+    min-height: 5%;
+}
+.card-height{
+    height:350px;
+    border-radius: 4px;
+}
+.imglist {
+    background-size: contain;
+    border-radius: 4px 4px 0px 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.table-wrapper {
+    /*border-bottom: 1px solid #cdcdcd;*/
+    padding-top:15px;
+}
+
+mat-card-content{
+    background-size:100% 100% !important;
+}
+
+@media (max-width: 500px) {
+    .listimgdiv {
+        width: 100%;
+    }
+}

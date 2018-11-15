@@ -1,0 +1,55 @@
+.dropwiz_frm {
+    background-color: #fdfbfb;
+    font-family: sans-serif;
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 2px;
+    border: 1px solid #cccccc;
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+}
+.wizard_lbl {
+    display: block;
+    line-height: 20px;
+    height: 25px;
+    height: 20px;
+    font-size: 12px;
+    padding: 5px;
+    color: #444;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+.top-spacing{
+    margin-top:15px;
+}
+
+.step5_grid {
+    width: 90%;
+    text-align: left;
+    font-size: 13px;
+    color: #444;
+    font-family: sans-serif;
+    margin-top: 15px;
+}
+.step5_grid td{
+    border:0px !important;
+}
+.step5_grid th{
+    text-align: center;
+    padding:8px;
+}
+.txtwiz_frm {
+    padding: 5px;
+    font-family: sans-serif;
+    color: #777;
+    font-size: 12px;
+    height: 30px;
+    width: 90%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-left: 10px;
+}

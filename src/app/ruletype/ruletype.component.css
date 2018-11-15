@@ -1,0 +1,13 @@
+ul{
+    list-style: none;
+    padding: 0px 15px !important;
+}
+.mat-radio-button{
+    position: relative;
+    padding-left: 0px !important;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 19px;
+    display: inline-block;
+    color: #666;
+}

@@ -1,0 +1,91 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+  <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                <label class="wizard_lbl">If (Numerator)</label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                <select [(ngModel)]="rCondition.numerator" class="dropwiz_frm">
+                    <option *ngFor="let item of numerator;let i = index;" [value]="item.DropDownID">
+                      {{item.DropDownName}}
+                    </option>
+                  </select>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                  <label class="wizard_lbl">Of (Validation Level)</label>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                  <select [(ngModel)]="rCondition.validator" class="dropwiz_frm">
+                      <option *ngFor="let item of validator;let i = index;" [value]="item.DropDownID">
+                        {{item.DropDownName}}
+                      </option>
+                    </select>
+              </div>
+          </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                <label class="wizard_lbl">in (Aggregation Level)</label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                <select [(ngModel)]="rCondition.aggregator" class="dropwiz_frm">
+                    <option *ngFor="let item of aggregator;let i = index;" [value]="item.DropDownID">
+                      {{item.DropDownName}}
+                    </option>
+                  </select>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                  <label class="wizard_lbl">Of (Denominator)</label>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+                  <select [(ngModel)]="rCondition.denominator" class="dropwiz_frm">
+                      <option *ngFor="let item of denominator;let i = index;" [value]="item.DropDownID">
+                        {{item.DropDownName}}
+                      </option>
+                    </select>
+              </div>
+          </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+        <table class="step5_grid" cellpadding="0" cellspacing="5">
+          <thead>
+            <th></th>
+            <th>Condition Type</th>
+            <th>Condition Value</th>
+            <th>Then</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of rCondition.conditionsArr;let i = index;">
+              <td style="width:10%;">{{item.sr_no}}</td>
+              <td style="width:30%;">
+                <select [(ngModel)]="item.cType" class="dropwiz_frm">
+                    <option *ngFor="let condtion of conditions;let i = index;" [value]="condtion.DropDownID">
+                        {{condtion.DropDownName}}
+                      </option>
+                </select>
+              </td>
+              <td style="width:30%;">
+                  <input type="text" class="txtwiz_frm" [(ngModel)]="item.cValue">
+              </td>
+              <td style="width:30%;">
+                <select [(ngModel)]="item.cThen" class="dropwiz_frm">
+                  <option *ngFor="let then of thens;let i = index;" [value]="then.DropDownID">
+                    {{then.DropDownName}}
+                  </option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-12">
+      <img alt="calc"  src="{{'assets/calc.png'}}" style="margin: 15px 0 0 30px;">
+  </div>
+</div>

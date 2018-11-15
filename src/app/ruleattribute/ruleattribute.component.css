@@ -1,0 +1,56 @@
+.mat-checkbox,.mat-radio-button{
+    position: relative;
+    padding-left: 0px !important;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 19px;
+    display: inline-block;
+    color: #666;
+}
+.expand-title{
+    font-size: 13px;
+    cursor: pointer;
+    height: 30px;
+    display: table;
+    text-align: left
+}
+.mat-expansion-panel{
+    display: contents !important;
+}
+.mat-expansion-panel-header{
+    font-weight: 600 !important;
+}
+.list_box1, .list_box2 {
+    height: 100px;
+    width: 250px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #777;
+    padding: 5px;
+}
+.top-spacing{
+    margin-top: 15px !important;
+}
+.lstbox_btn {
+    background: #777a7b;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    width: 41px;
+    height: 25px;
+    margin: 5px;
+}
+.center-align{
+    text-align:center;
+}
+
+.lbl{
+    font-family: sans-serif;
+    line-height: 20px;
+    font-size: 13px;
+    float: left;
+    width: 200px;
+    color: #444;
+}

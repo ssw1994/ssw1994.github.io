@@ -1,0 +1,54 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+    <div class="col-md-11 col-sm-11 col-xs-12 padding0">
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  User Defined Attributes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div>
+                  <div *ngFor="let attribute of attributes.userAttributes;let i = index;">
+                      <div [ngClass]="{'col-md- 2 col-sm-2 col-xs-6 padding0' : attribute.options}">
+                          <span class="lbl">{{attribute.DropDownName}}</span>
+                      </div>
+                        <div *ngIf="attribute.options" class="col-md-10 col-sm-10 col-xs-6">
+                        <mat-radio-group [(ngModel)]="attribute.selected">
+                          <div class="col-md-2 col-sm-3 col-xs-12" *ngFor="let subAtr of attribute.options;let j = index;">
+                            <mat-radio-button [value]="subAtr.DropDownID">{{subAtr.DropDownName}}</mat-radio-button>
+                          </div>
+                        </mat-radio-group>
+                        </div>
+                  </div>
+              </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <div class="col-md-11 col-sm-11 col-xs-12 padding0">
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Logic Driven Attributes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div>
+                  <div *ngFor="let attribute of attributes.logicalAttributes;let i = index;">
+                      <div [ngClass]="{'col-md- 2 col-sm-2 col-xs-6 padding0' : attribute.options}">
+                          <span class="lbl">{{attribute.DropDownName}}</span>
+                      </div>
+                        <div *ngIf="attribute.options" class="col-md-10 col-sm-10 col-xs-6">
+                          <div class="col-md-3 col-sm-3 col-xs-12" *ngFor="let subAtr of attribute.options;let j = index;">
+                            <mat-checkbox [value]="subAtr.DropDownID" [(ngModel)]="subAtr.checked">{{subAtr.DropDownName}}</mat-checkbox>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    
+  </div>
+

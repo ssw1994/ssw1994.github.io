@@ -1,0 +1,9 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+  <ul>
+    <mat-radio-group [(ngModel)]="type.selectedType">
+        <li *ngFor="let rule of ruleTypes;let i = index;">
+            <mat-radio-button [value]="rule.DropDownID">{{rule.DropDownName}}</mat-radio-button>
+        </li>
+    </mat-radio-group>
+  </ul>
+</div>

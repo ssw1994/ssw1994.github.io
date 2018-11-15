@@ -1,0 +1,269 @@
+{
+    "userdefined":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Eligible Market Type",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Eligible Market"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"No Eligible Market"
+                }
+            ]
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"Is GOPS Issuer",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Yes"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"No"
+                }
+            ]
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"Is Acceptable Deposit taker",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Yes"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"No"
+                }
+            ]
+        },
+        {
+            "DropDownID":4,
+            "DropDownName":"Acceptable OTC Limit",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Not Eligible"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"5%"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"10%"
+                }
+            ]
+        },
+        {
+            "DropDownID":5,
+            "DropDownName":"Settlement Type",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Physically Settled"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"Cash Settled"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"Undefined"
+                }
+            ]
+        }
+    ],
+
+    "logicdriven":[
+        {
+            "DropDownID":1,
+            "DropDownName":"CIS Type",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"IRISH_QIF"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Luxemxbourg_SIF"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"Pension Fund"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"QIF"
+                },
+                {
+                    "DropDownID":5,
+                    "DropDownName":"Real Estate Investment Trust"
+                },
+                {
+                    "DropDownID":6,
+                    "DropDownName":"UCITS"
+                },
+                {
+                    "DropDownID":7,
+                    "DropDownName":"Investment Trust"
+                },
+                {
+                    "DropDownID":8,
+                    "DropDownName":"UK_FAIF"
+                },
+                {
+                    "DropDownID":9,
+                    "DropDownName":"UNKNOWN"
+                },
+                {
+                    "DropDownID":10,
+                    "DropDownName":"UNREGULATED_CIS"
+                },
+                {
+                    "DropDownID":11,
+                    "DropDownName":"US 1940 ACT"
+                },
+                {
+                    "DropDownID":12,
+                    "DropDownName":"Other"
+                }
+            ]
+        },
+
+        {
+            "DropDownID":2,
+            "DropDownName":"Fund UL Asset Class",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"PRIVATE_EQUITY"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"REALESTATE"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"UL Asset class is NA"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"Interest Rates"
+                },
+                {
+                    "DropDownID":5,
+                    "DropDownName":"Convertibles"
+                },
+                {
+                    "DropDownID":6,
+                    "DropDownName":"Equities ex Pref"
+                },
+                {
+                    "DropDownID":7,
+                    "DropDownName":"CASH"
+                },
+                {
+                    "DropDownID":8,
+                    "DropDownName":"Equities & Bonds"
+                },
+                {
+                    "DropDownID":9,
+                    "DropDownName":"MIXED"
+                },
+                {
+                    "DropDownID":10,
+                    "DropDownName":"FUNDS"
+                },
+                {
+                    "DropDownID":11,
+                    "DropDownName":"Alternative"
+                },
+                {
+                    "DropDownID":12,
+                    "DropDownName":"Speciality"
+                }
+            ]
+        },
+
+        {
+            "DropDownID":3,
+            "DropDownName":"UCITS Asset Type",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"CPProxy"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Fund Account Cash capital"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"Rights"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"ShareClass Hedges"
+                },
+                {
+                    "DropDownID":5,
+                    "DropDownName":"Cash_Capital"
+                },
+                {
+                    "DropDownID":6,
+                    "DropDownName":"Warrants"
+                },
+                {
+                    "DropDownID":7,
+                    "DropDownName":"Spot_Fx"
+                },
+                {
+                    "DropDownID":8,
+                    "DropDownName":"Cash_Income_Cash"
+                },
+                {
+                    "DropDownID":9,
+                    "DropDownName":"CIU_UCITS"
+                },
+                {
+                    "DropDownID":10,
+                    "DropDownName":"Forward FX"
+                },
+                {
+                    "DropDownID":11,
+                    "DropDownName":"Reverse Repos"
+                },
+                {
+                    "DropDownID":12,
+                    "DropDownName":"Close Ended"
+                }
+            ]
+        }
+    ]
+}

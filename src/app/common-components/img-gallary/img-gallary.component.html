@@ -1,0 +1,9 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+  <div class="col-md-12 col-sm-12 col-xs-12 img-show"
+  [ngStyle]="{'background-image': 'url(' + (filePath + currentImage) + ')'}"></div>
+  <div class="col-md-12 col-sm-12 col-xs-12 img-list">
+    <div class="img-slide arrow" [ngStyle]="{'width' : 100 / (showCount + 2) + '%'}"><span (click)="slide(-1)"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></span></div>
+    <div class="img-slide" *ngFor="let img of imageList|syncImage:showCount:start;let i = index;" [ngStyle]="{'background-image': 'url(' + (filePath + img) + ')','width' : 100 / (showCount + 2) + '%'}" (click)="setImage(img)"></div>
+    <div class="img-slide arrow" [ngStyle]="{'width' : 100 / (showCount + 2) + '%'}"><span (click)="slide(1)"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></span></div>
+  </div>
+</div>

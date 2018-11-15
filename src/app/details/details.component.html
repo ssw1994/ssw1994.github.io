@@ -1,0 +1,64 @@
+<div class="col-md-12 col-sm-12 col-xs-12" [formGroup]="detailForm">
+  <div class="col-md-11 col-sm-11 col-xs-11 padding0">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing">
+        <div class="col-md-6 col-sm-6 col-xs-12 padding0">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <label class="wizard_lbl">Name
+                  <span class="wiz_lbl_star">*</span>
+              </label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <input type="text" class="form-control" formControlName="name" [(ngModel)]="details.name" name="name">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12 padding0">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                  <label class="wizard_lbl">Short Name
+                      <span class="wiz_lbl_star">*</span>
+                  </label>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                  <input type="text" class="form-control" formControlName="shortName" name="shortName" [(ngModel)]="details.shortName">
+              </div>
+          </div> 
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing">
+        <div class="col-md-6 col-sm-6 col-xs-12 padding0">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <label class="wizard_lbl">Reference No.
+                    <span class="wiz_lbl_star">*</span>
+                </label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" formControlName="refNo" name="refNo" [(ngModel)]="details.refNo">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 padding0">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <label class="wizard_lbl">Rule Group
+                    <span class="wiz_lbl_star">*</span>
+                </label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" formControlName="ruleGroup" name="ruleGroup" [(ngModel)]="details.ruleGroup">
+            </div>
+        </div> 
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <label class="wizard_lbl">Description</label>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <textarea  rows="3" class="form-control" formControlName="description" name="description" [(ngModel)]="details.description"></textarea>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <label class="wizard_lbl">Resolution Tip</label>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <textarea  rows="3" class="form-control" formControlName="resolutionTip" name="resolutionTip" [(ngModel)]="details.resolutionTip"></textarea>
+        </div>
+    </div>
+  </div>
+</div>

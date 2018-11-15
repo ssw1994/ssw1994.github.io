@@ -1,0 +1,14 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0 service-cards" (click)="showDetails()">
+  <mat-card class="card-height">
+      <mat-card-content class="image-container imglist" [ngStyle]="{'backgroundImage':'url(' + filePath + product.productImages[0] + ')'}">
+            <div *ngIf="product.productDiscount" class="cls-dis">{{product.productDiscount}} off</div>
+      </mat-card-content>
+      <mat-card-content class="text-container">
+          <mat-card-title class="service-title"><a>{{product.productName}}</a></mat-card-title>
+      </mat-card-content>
+      <mat-card-content class="rating-container">
+        <span><b>&pound; {{ numberFormat(product.productPrice,2)}}</b></span>
+         <app-rating [rating]="product.productRating" [enableRating]="true"></app-rating>
+      </mat-card-content>
+  </mat-card>
+</div>

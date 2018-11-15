@@ -1,0 +1,87 @@
+<div class="col-md-12 col-sm-12 col-xs-12" [formGroup]="apiForm">
+  <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+    <div class="col-md-2 col-sm-2 col-xs-12">
+      <mat-form-field>
+        <mat-select placeholder="Method" [(ngModel)]="apiDetails.method" formControlName="method" name="method">
+          <mat-option *ngFor="let method of methods" [value]="method.DropDownID">
+            {{method.DropDownName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-8 col-sm-8 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+          <mat-form-field>
+              <input matInput placeholder="URL" [(ngModel)]="apiDetails.url" formControlName="url" name="url">
+          </mat-form-field>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 padding0 req-option">
+        <ul>
+          <li *ngFor="let option of requestOptions;let i = index" class="col-md-3 col-sm-3 col-xs-12 padding0" (click)="currentTab = option.DropDownID;">
+            <a>{{option.DropDownName}}<span><i class="fa fa-circle"></i></span></a>
+            <div class="h_line" *ngIf="currentTab == option.DropDownID"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+        <div class="req-params table-responsive" [hidden]="currentTab != 1">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">KEY</th>
+                <th class="col-5">VALUE</th>
+                <th class="col-2"><span (click)="addValue('Params',1)"><i matTooltip="Add" class="fa fa-plus" aria-hidden="true"></i></span></th>
+              </tr>
+            </thead>
+            <tbody formArrayName="params">
+              <tr *ngFor="let param of apiForm.controls['params']['controls'];let i = index;" [formGroupName]="i"> 
+                <td><input type="text" formControlName="key" name="key"></td>
+                <td><input type="text" formControlName="value" name="value"></td>
+                <td><span (click)="addValue('Params',-1,i)"><i class="fa fa-trash-o"></i></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="req-params table-responsive" [hidden]="currentTab != 3">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="col-5">KEY</th>
+                <th class="col-5">VALUE</th>
+                <th class="col-2"><span (click)="addValue('Headers',1)"><i matTooltip="Add" class="fa fa-plus" aria-hidden="true"></i></span></th>
+              </tr>
+            </thead>
+            <tbody formArrayName="headers">
+              <tr *ngFor="let header of apiForm.controls['headers']['controls'];let i = index;" [formGroupName]="i"> 
+                <td><input type="text" formControlName="key" name="key"></td>
+                <td><input type="text" formControlName="value" name="value"></td>
+                <td><span (click)="addValue('Headers',-1,i)"><i class="fa fa-trash-o"></i></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="req-params"></div>
+        <div class="req-params" [hidden] ="(currentTab != 4 || apiDetails.method == 'GET')">
+          <div class="col-md-12 col-sm-12 col-xs-12 padding0"> <!--[ngClass]="{'error': !apiForm.get('body').valid && apiForm.get('body').touched }"-->
+            <textarea  rows=5 class="body-input" [(ngModel)]="apiDetails.body" formControlName="body" name="body"></textarea>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-3 action-btn">
+      <div class="col-md-6 col-sm-6 col-xs-6 action-btn">
+          <button mat-button (click)="callApi(apiDetails.method)">send</button>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6 action-btn">
+          <button mat-button (click)="saveToFile(apiDetails,'application/json')">save</button>
+      </div>
+    </div>
+    
+    <div class="col-md-offset-2 col-xs-offset col-sm-offset-2 col-md-8 col-sm-8 col-xs-8" id="response">
+        <span class="print-icon"><i matTooltip="print" class="fa fa-print fa-lg" aria-hidden="true" (click)="printResponse()"></i><i (click)="copyContent()" matTooltip="copy" style="margin-left:5px" class="fa fa-files-o fa-lg" aria-hidden="true"></i></span>
+        <pre id="res-body"></pre>
+    </div>
+  </div>
+</div>
