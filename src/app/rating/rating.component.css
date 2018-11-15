@@ -1,0 +1,13 @@
+ul{
+list-style-type: none;
+padding:0px;
+}
+li{
+    float:left;
+}
+li span{
+    margin-left:2px;
+}
+.disabled{
+    pointer-events: none;
+}

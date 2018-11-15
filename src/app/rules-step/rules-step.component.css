@@ -1,0 +1,49 @@
+.action-btn{
+    width: 100px;
+    background: #53a1d8;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    font-family: sans-serif;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+.nxt{
+    float: right;
+}
+.mat-card.mat-card {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 98.5%;
+    margin: 0px 10px;
+}
+.fs-title{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #3f3f40;
+    height: 32px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    background: #eee;
+    font-family: sans-serif;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2{
+    font-weight: 700 !important;
+}
+.top-spacing{
+    margin-top: 15px !important;
+}

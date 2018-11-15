@@ -1,0 +1,10 @@
+<div class="col-md-12 col-sm-12 padding0" style="border-top:1px solid #cdcdcd">
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+        <div *ngFor="let product of products;let i = index;" class="col-md-3 col-sm-3 col-xs-6 listimgdiv">
+            <app-product-card [product]="product" (clicked)="getProductDetails($event)"></app-product-card>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <app-pagination [totalRecords]="products.length" [recordsPerPage]="recordsPerPage" [currentPage]="currentPage" (pageClick)="getCurrentPage($event)"></app-pagination>
+        </div>
+    </div>
+</div>

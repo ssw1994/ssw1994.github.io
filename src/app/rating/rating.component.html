@@ -1,0 +1,10 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0" [ngClass]="{'disabled': !enableRating }">
+  <div>
+    <ul>
+      <li *ngFor="let star of stars" >
+        <span class="fa fa-star" matToolTip="star.value" (mouseover)="starFocused(star.value)" (mouseout)="starFocusedOut()" (click)="starClicked(star.value)" [ngStyle]="{'color':star.value <= rating ? '#ffa500' : 'black'}"></span>
+      </li>
+    </ul>
+  </div>
+</div>
+

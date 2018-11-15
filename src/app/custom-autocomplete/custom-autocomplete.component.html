@@ -1,0 +1,31 @@
+<div [formGroup]="autoCompleteForm" class="col-md-4 col-sm-4 col-xs-4 autoList">
+  <div class="col-md-12 col-sm-12 col-xs-12 input-box">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+        <mat-form-field>
+            <span matSuffix>
+                <i *ngIf="showLoad" class="fa fa-spinner fa-pulse fa-lg fa-fw" style="color:#993366;"></i>
+                <i class="fa fa-search search-icon" (click)="search();"aria-hidden="true" style="font-size: 16px;" [ngStyle]="{'pointer-events': autoCompleteForm.get('postCode').valid ? '' :'none'}"></i>
+                <span style="font-weight: bold;color:gray;margin:0px 5px 0px 5px;pointer-events:none;">|</span>
+                <i [ngStyle]="{'pointer-events': postCode ? '' :'none'}" class="fa fa-close close-icon" (click)="clear();"></i>
+            </span>
+            <input matInput [(ngModel)]="postCode" formControlName="postCode" name="postCode" (keyup)="emptyList()" (focus)="animateDropDown(true);" (focusout)="animateDropDown(false);">
+            <mat-error *ngIf="autoCompleteForm.get('postCode').hasError('required') && autoCompleteForm.get('postCode').touched">
+                PostCode is <strong>Required</strong>
+            </mat-error>
+            <mat-error *ngIf="autoCompleteForm.get('postCode').hasError('pattern') && autoCompleteForm.get('postCode').touched">
+                PostCode is <strong>Invalid</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+  </div>
+  <mat-card *ngIf="locations && locations.length > 0 && isFocused">
+      <div class="box input-box">
+          <p *ngFor="let location of locations|postCodePipe : postCode;let i = index;" (click)="setLocation(location);">
+              <i class="fa fa-map-marker fa-lg searchmarker" aria-hidden="true" style="margin-right:10px;color:#993366;"></i>
+              <span style="font-family: Roboto-Bold; color: #993366;">{{location.postCode}}</span>
+              <span style="color:#553c3c;font-size:12px;margin-left:5px;">{{location.display}}</span>
+          </p>
+      </div>
+  </mat-card>
+  
+</div>

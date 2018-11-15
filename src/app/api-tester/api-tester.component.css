@@ -1,0 +1,83 @@
+.action-btn{
+    text-align: center;
+}
+
+.body-input{
+    width:100%;
+}
+
+#response pre{
+    min-height: 150px;
+    height: 350px !important;
+}
+
+#response:hover > .print-icon,.copy-icon{
+    display: block;
+}
+
+
+.print-icon{
+    position: absolute;
+    right: 35px;
+    display: none;
+}
+
+.display-none{
+    display: 'none';
+}
+.copy-icon{
+    position: absolute;
+    right: 65px;
+    display: none;
+}
+
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+.error{
+    border-color:red !important;
+}
+.req-option{
+    padding-top:10px;
+    padding-bottom: 10px;
+    border:1px solid gray;
+    background-color: #eeeded;
+    border-radius: 5px !important;
+}
+
+.req-option ul{
+    padding: 0px !important;
+    margin-left:5% !important;
+}
+
+li i {
+    font-size:8px;
+    margin-left:5px !important;
+    color:green;
+}
+
+.req-params{
+    width: 100% !important;
+}
+
+.h_line{
+    width: 50%;
+    height: 4px;
+    background-color: #eea0a0;
+}
+
+li a{
+    font-family: initial !important;
+}
+
+.req-option ul li{
+    list-style-type: none;
+    font-family: 
+}
+
+.req-params table th,td{
+    text-align: center;
+}

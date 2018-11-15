@@ -1,0 +1,34 @@
+[
+    {
+        "DropDownID":1,
+        "DropDownName":"Benchmark Rule"
+    },
+    {
+        "DropDownID":2,
+        "DropDownName":"Exposure Limit"
+    },
+    {
+        "DropDownID":3,
+        "DropDownName":"Eligible Asset Types"
+    },
+    {
+        "DropDownID":4,
+        "DropDownName":"Non Eligible Asset Types"
+    },
+    {
+        "DropDownID":5,
+        "DropDownName":"Diversification"
+    },
+    {
+        "DropDownID":6,
+        "DropDownName":"Concentration"
+    },
+    {
+        "DropDownID":7,
+        "DropDownName":"Borrowing"
+    },
+    {
+        "DropDownID":8,
+        "DropDownName":"Rating"
+    }
+]

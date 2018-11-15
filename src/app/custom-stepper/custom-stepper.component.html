@@ -1,0 +1,37 @@
+<div class="col-md-12 col-sm-12 col-xs-12 stepper padding0">
+  <div>
+    <mat-card>
+      <div class="prg-bar" [ngClass]="{'disabled':isLinear}">
+          <div *ngFor="let step of steps;let i = index" class="step-box col-md-2">
+              <div class="step-number"><div class="h_line" *ngIf="i < steps.length -1" [ngClass]="{'completed_h_line':activeStep.step > step.step , 'in-completed_h_line': activeStep.step <= step.step}"></div><button [ngClass]="{'active':activeStep.step >= i+1 }" (click)="stepClick(step)">{{i+1}}</button></div>
+              <div class="step-title hidden-xs">{{step.title}}</div>
+          </div>
+      </div>
+    </mat-card>
+  </div>
+  
+  <div class="col-md-12 col-sm-12 col-xs-12 padding0">
+    <mat-card class="stepBlock">
+      <div *ngFor="let step of steps;let i = index;">
+          <div *ngIf="step.step == activeStep.step">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                  <h2 class="fs-title">{{step.title}}</h2>
+                  <h3 class="fs-subtitle">{{"step " + step.step + " of " + steps.length}}</h3>
+              </div>
+              <div *ngIf="step.step == 1"><app-details></app-details></div>
+              <div *ngIf="step.step == 2"><app-ruletype></app-ruletype></div>
+              <div *ngIf="step.step == 3"><app-rulefilters></app-rulefilters></div>
+              <div *ngIf="step.step == 4"><app-rulecondition></app-rulecondition></div>
+              <div *ngIf="step.step == 5"><app-ruleattribute></app-ruleattribute></div>
+              <div *ngIf="step.step == 6"><app-ruletest></app-ruletest></div>
+              <div *ngIf="step.step == 7"><app-ruleattachment></app-ruleattachment></div>
+              <div *ngIf="step.step == 8"><app-ruleapproval></app-ruleapproval></div>
+          </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+          <button class="action-btn prev" [ngClass]="{'disabled':activeStep.step == 1}" (click)="changeStep(-1);">Previous</button>
+          <button class="action-btn nxt" [ngClass]="{'disabled':activeStep.step == steps.length}" (click)="changeStep(1);">Next</button>
+        </div>
+     </mat-card>
+  </div>
+</div>

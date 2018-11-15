@@ -1,0 +1,88 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div *ngFor="let filter of filters.defaultTypes;let i = index;">
+      <div [ngClass]="{'col-md-4 col-sm-4 col-xs-6 padding0' : filter.subTypes && filter.checked}">
+          <mat-checkbox [value]="filter.DropDownID" [(ngModel)]="filter.checked" (change)="checkBoxChecked(filter,'assetGroup')">{{filter.DropDownName}}</mat-checkbox>
+      </div>
+        <div *ngIf="filter.subTypes && filter.checked" class="col-md-8 col-sm-8 col-xs-6">
+          <div *ngFor="let subfilter of filter.subTypes;let j = index;">
+            <mat-checkbox [value]="subfilter.DropDownID" [(ngModel)]="subfilter.checked" (change)="checkBoxChecked(subfilter,'assetTypes')">{{subfilter.DropDownName}}</mat-checkbox>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing" *ngIf="showAssetGroup">
+      <div class="col-md-3 col-sm-3 col-xs-12">
+          <select multiple="multiple" class="list_box1" [(ngModel)]="filters.selectedGroups">
+            <option *ngFor="let group of filters.assetGroups;let i = index;" [value]="group.DropDownID">
+              {{group.DropDownName}}
+            </option>
+          </select>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12">
+          <div class="col-md-12 col-sm-12 col-xs-12 padding0 center-align">
+              <button class="lstbox_btn" (click)="transferFilters(filters.assetGroups,filters.selectedAssetGroups,filters.selectedGroups)"><i class="fa fa-angle-right fa-lg"></i></button>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padding0 center-align">
+              <button class="lstbox_btn" (click)="transferFilters(filters.selectedAssetGroups,filters.assetGroups,filters.selectedGroups)"><i class="fa fa-angle-left fa-lg"></i></button>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+          <select multiple="multiple" class="list_box1" [(ngModel)]="selectedGroups">
+            <option *ngFor="let group of filters.selectedAssetGroups;let i = index;" [value]="group.DropDownID">
+              {{group.DropDownName}}
+            </option>
+          </select>
+      </div>
+  </div>
+  
+    <div class="col-md-12 col-sm-12 col-xs-12 padding0 top-spacing" *ngIf="showAssetType">
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <select multiple="multiple" class="list_box1" [(ngModel)]="filters.selectedAssets">
+           <option *ngFor="let group of filters.assetTypes;let i = index;" [value]="group.DropDownID">
+             {{group.DropDownName}}
+           </option>
+        </select>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 padding0 center-align">
+            <button class="lstbox_btn" (click)="transferFilters(filters.assetTypes,filters.selectedAssetTypes,filters.selectedAssets)"><i class="fa fa-angle-right fa-lg"></i></button>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 padding0 center-align">
+            <button class="lstbox_btn" (click)="transferFilters(filters.selectedAssetTypes,filters.assetTypes,filters.selectedAssets)"><i class="fa fa-angle-left fa-lg"></i></button>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        <select multiple="multiple" class="list_box1" [(ngModel)]="filters.selectedAssets">
+          <option *ngFor="let group of filters.selectedAssetTypes;let i = index;" [value]="group.DropDownID">
+            {{group.DropDownName}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+  <div class="col-md-11 col-sm-11 col-xs-12 padding0 top-spacing">
+      <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                User Defined Attributes
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+                <div *ngFor="let filter of filters.userTypes;let i = index;">
+                    <div [ngClass]="{'col-md-2 col-sm-2 col-xs-6 padding0' : filter.options && filter.checked}">
+                        <mat-checkbox [value]="filter.DropDownID" [(ngModel)]="filter.checked">{{filter.DropDownName}}</mat-checkbox>
+                    </div>
+                      <div *ngIf="filter.options && filter.checked" class="col-md-10 col-sm-10 col-xs-6">
+                        <div class="col-md-3 col-sm-3 col-xs-12" *ngFor="let subfilter of filter.options;let j = index;">
+                          <mat-checkbox [value]="subfilter.DropDownID" [(ngModel)]="subfilter.checked">{{subfilter.DropDownName}}</mat-checkbox>
+                        </div>
+                      </div>
+                </div>
+            </div>
+          </mat-expansion-panel>
+      </mat-accordion>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.img-show{
+    height: 250px;
+    width: 100%;
+    background-size:100% 100% !important;
+    background-repeat: no-repeat;
+    padding:10px;
+}
+
+.img-slide {
+    border:1px solid gray;
+    height : 40px;
+    background-repeat : no-repeat;
+    background-size : 100% 100%;
+    float:left;
+}
+.arrow{
+    text-align:center;
+    padding-top:1%;
+}

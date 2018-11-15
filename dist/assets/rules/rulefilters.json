@@ -1,0 +1,230 @@
+{
+    "default":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Asset Groups",
+            "subTypes":[
+                {
+                    "DropDownID":7,
+                    "DropDownName":"Asset Types"
+                }
+            ]
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"Currency"
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"Country of Incorporation"
+        },
+        {
+            "DropDownID":4,
+            "DropDownName":"Country of Domicile"
+        },
+        {
+            "DropDownID":5,
+            "DropDownName":"Country of Revenue"
+        },
+        {
+            "DropDownID":6,
+            "DropDownName":"Exchange"
+        }
+    ],
+    "userdefined":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Eligible Market Type",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Eligible Market"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"No Eligible Market"
+                }
+            ]
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"Is GOPS Issuer",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Yes"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"No"
+                }
+            ]
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"Is Acceptable Deposit taker",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Yes"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"No"
+                }
+            ]
+        },
+        {
+            "DropDownID":4,
+            "DropDownName":"Acceptable OTC Limit",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Not Eligible"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"5%"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"10%"
+                }
+            ]
+        },
+        {
+            "DropDownID":5,
+            "DropDownName":"Settlement Type",
+            "options":[
+                {
+                    "DropDownID":1,
+                    "DropDownName":"Any"
+                },
+                {
+                    "DropDownID":2,
+                    "DropDownName":"Physically Settled"
+                },
+                {
+                    "DropDownID":3,
+                    "DropDownName":"Cash Settled"
+                },
+                {
+                    "DropDownID":4,
+                    "DropDownName":"Undefined"
+                }
+            ]
+        }
+    ],
+    "assetgroups":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Asset Backed Securities"
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"Borrrowing"
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"Cash"
+        },
+        {
+            "DropDownID":4,
+            "DropDownName":"Commodities"
+        },
+        {
+            "DropDownID":5,
+            "DropDownName":"CPProxy Holding"
+        },
+        {
+            "DropDownID":6,
+            "DropDownName":"CPProxy HoldingOffset"
+        },
+        {
+            "DropDownID":7,
+            "DropDownName":"Currency"
+        },
+        {
+            "DropDownID":8,
+            "DropDownName":"Custody Cash"
+        },
+        {
+            "DropDownID":9,
+            "DropDownName":"Depositary Receipts"
+        },
+        {
+            "DropDownID":10,
+            "DropDownName":"Deposits"
+        },
+        {
+            "DropDownID":11,
+            "DropDownName":"Derivatives – Forward FX"
+        },
+        {
+            "DropDownID":12,
+            "DropDownName":"Derivatives – Others"
+        }
+    ],
+    "assettypes":[
+        {
+            "DropDownID":1,
+            "DropDownName":"COMMONSwap"
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"CONTRACT FOR DIFFERENCE"
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"CONTRACT FOR DIFFERENCE - DUAL CCY"
+        },
+        {
+            "DropDownID":4,
+            "DropDownName":"CONTRACT FOR DIFFERENCE - SINGLE CCY"
+        },
+        {
+            "DropDownID":5,
+            "DropDownName":"CORP BONDSwap"
+        },
+        {
+            "DropDownID":6,
+            "DropDownName":"CREDIT DEFAULT SWAP - INDEX"
+        },
+        {
+            "DropDownID":7,
+            "DropDownName":"CREDIT DEFAULT SWAP - SINGLE NAME"
+        },
+        {
+            "DropDownID":8,
+            "DropDownName":"CREDIT DEFAULTSwap"
+        },
+        {
+            "DropDownID":9,
+            "DropDownName":"CROSS CURRENCY SWAP - VANILLA"
+        },
+        {
+            "DropDownID":10,
+            "DropDownName":"CURRENCY OPTION"
+        },
+        {
+            "DropDownID":11,
+            "DropDownName":"ADRSwap"
+        }
+    ]
+}

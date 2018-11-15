@@ -1,0 +1,13 @@
+<div class="drop-box" [formGroup]="listForm">
+  <mat-form-field>
+    <input matInput placeholder="{{placeholder}}" [matAutocomplete]="auto" formControlName="choice" [(ngModel)]="label" (click)="clearFilter()" (focusout)="setDefaultFilter()">
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let item of filteredList | async" [value]="item.label" (click)="optionSelected(item)" (onSelectionChange)="optionSelected(item)">
+            <span>{{ item.label }}</span>
+        </mat-option>
+    </mat-autocomplete>
+    <mat-error *ngIf="listForm.get('choice').hasError('required') && listForm.get('choice').touched">
+      {{placeholder}} is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</div>

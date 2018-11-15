@@ -1,0 +1,77 @@
+{
+    "numerator":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Gross Exposure"
+        }
+    ],
+    "validator":[
+        {
+            "DropDownID":1,
+            "DropDownName":"All Holdings"
+        }
+    ],
+    "aggregator":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Scheme"
+        }
+    ],
+    "denominator":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Found NAV"
+        }
+    ],
+    "conditions":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Min"
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"Max"
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"Between"
+        },{
+            "DropDownID":4,
+            "DropDownName":"="
+        },
+        {
+            "DropDownID":5,
+            "DropDownName":"<"
+        },
+        {
+            "DropDownID":6,
+            "DropDownName":">"
+        },
+        {
+            "DropDownID":7,
+            "DropDownName":"<="
+        },
+        {
+            "DropDownID":8,
+            "DropDownName":">="
+        }
+    ],
+    "thens":[
+        {
+            "DropDownID":1,
+            "DropDownName":"Breach"
+        },
+        {
+            "DropDownID":2,
+            "DropDownName":"Pass"
+        },
+        {
+            "DropDownID":3,
+            "DropDownName":"Warning"
+        },
+        {
+            "DropDownID":4,
+            "DropDownName":"Other Clause"
+        }
+    ]
+}

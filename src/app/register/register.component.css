@@ -1,0 +1,36 @@
+.reg-header{
+    min-height: 75px;
+    max-height: 100px;
+    background-color: #cdccbe;
+    font-size: 300%;
+    color: #ffffff;
+    text-align: center;
+    font-family: courier;
+    font-weight: 700
+}
+.register-action button{
+    height: 50px;
+    border-radius: 0px !important;
+    width:100%;
+    font-size:25px;
+    font-weight:700;
+    font-family: 'Courier New', Courier, monospace;
+}
+.msg{
+    font-weight: 600;
+    opacity: 0.5;
+    font-size:12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(16, 31, 231);
+}
+.register-box{
+    box-shadow: 0px 0px 15px;
+}
+@media only screen and (min-width: 768px) {
+    /* For mobile phones: */
+    .register-box {
+        margin-left:25%;
+        margin-top:2%;
+        box-shadow: 0px 0px 15px;
+    }
+}

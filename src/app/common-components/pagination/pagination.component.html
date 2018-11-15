@@ -1,0 +1,19 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padding0">
+ <nav aria-label="Page navigation example">
+   <ul class="pagination">
+      <li class="page-item" [ngClass]="{'disabled':currentPage == 0}" (click)="setPage(0)">
+        <a class="page-link" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li *ngFor="let item of pages;let i = index;" class="page-item" (click)="setPage(i)" [ngClass]="{'active':currentPage == i}">
+        <a class="page-link">{{i + 1}}</a>
+     </li>
+     <li class="page-item" [ngClass]="{'disabled':currentPage == (pages.length - 1)}" (click)="setPage(pages.length - 1)">
+        <a class="page-link" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+     </li>
+   </ul>
+ </nav>
+</div>
